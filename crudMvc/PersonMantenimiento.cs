@@ -109,7 +109,7 @@ namespace crudMvc
         }
         private void Datos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (Datos.Rows[e.RowIndex].Cells["delete"].Selected) {
+            if (Datos.Rows[e.RowIndex].Cells["deleteItem"].Selected) {
                 int delete = Convert.ToInt32(Datos.Rows[e.RowIndex].Cells["id"].Value.ToString());
                 DialogResult bottom = MessageBox.Show("Desea eliminar este dato?", "Correcto", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (bottom == DialogResult.OK)

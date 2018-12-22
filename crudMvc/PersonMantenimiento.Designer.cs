@@ -46,6 +46,15 @@
             this.ButtonInsert = new System.Windows.Forms.Button();
             this.ButtonClear = new System.Windows.Forms.Button();
             this.Datos = new System.Windows.Forms.DataGridView();
+            this.InputGender = new System.Windows.Forms.ComboBox();
+            this.InputBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.textPersonId = new System.Windows.Forms.Label();
+            this.textSearch = new System.Windows.Forms.Label();
+            this.InputSearch = new System.Windows.Forms.TextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.buttonPersonAll = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cui = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,15 +65,7 @@
             this.cellPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.update = new System.Windows.Forms.DataGridViewImageColumn();
-            this.InputGender = new System.Windows.Forms.ComboBox();
-            this.InputBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.textPersonId = new System.Windows.Forms.Label();
-            this.textSearch = new System.Windows.Forms.Label();
-            this.InputSearch = new System.Windows.Forms.TextBox();
-            this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonPersonAll = new System.Windows.Forms.Button();
+            this.deleteItem = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Datos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -237,72 +238,13 @@
             this.phone,
             this.cellPhone,
             this.email,
-            this.update});
+            this.update,
+            this.deleteItem});
             this.Datos.Location = new System.Drawing.Point(304, 121);
             this.Datos.Name = "Datos";
             this.Datos.Size = new System.Drawing.Size(699, 258);
             this.Datos.TabIndex = 19;
             this.Datos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Datos_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            // 
-            // cui
-            // 
-            this.cui.DataPropertyName = "cui";
-            this.cui.HeaderText = "Cui";
-            this.cui.Name = "cui";
-            // 
-            // firstName
-            // 
-            this.firstName.DataPropertyName = "firstName";
-            this.firstName.HeaderText = "Nombres";
-            this.firstName.Name = "firstName";
-            // 
-            // lastName
-            // 
-            this.lastName.DataPropertyName = "lastName";
-            this.lastName.HeaderText = "Apellidos";
-            this.lastName.Name = "lastName";
-            // 
-            // gender
-            // 
-            this.gender.DataPropertyName = "gender";
-            this.gender.HeaderText = "Genero";
-            this.gender.Name = "gender";
-            // 
-            // birthDate
-            // 
-            this.birthDate.DataPropertyName = "birthDate";
-            this.birthDate.HeaderText = "Fecha de nacimiento";
-            this.birthDate.Name = "birthDate";
-            // 
-            // phone
-            // 
-            this.phone.DataPropertyName = "phone";
-            this.phone.HeaderText = "Teléfono";
-            this.phone.Name = "phone";
-            // 
-            // cellPhone
-            // 
-            this.cellPhone.DataPropertyName = "cellPhone";
-            this.cellPhone.HeaderText = "Celular";
-            this.cellPhone.Name = "cellPhone";
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Correo";
-            this.email.Name = "email";
-            // 
-            // update
-            // 
-            this.update.HeaderText = "Modificar";
-            this.update.Image = global::crudMvc.Properties.Resources.update3;
-            this.update.Name = "update";
             // 
             // InputGender
             // 
@@ -386,6 +328,73 @@
             this.buttonPersonAll.UseVisualStyleBackColor = true;
             this.buttonPersonAll.Click += new System.EventHandler(this.buttonPersonAll_Click);
             // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            // 
+            // cui
+            // 
+            this.cui.DataPropertyName = "cui";
+            this.cui.HeaderText = "Cui";
+            this.cui.Name = "cui";
+            // 
+            // firstName
+            // 
+            this.firstName.DataPropertyName = "firstName";
+            this.firstName.HeaderText = "Nombres";
+            this.firstName.Name = "firstName";
+            // 
+            // lastName
+            // 
+            this.lastName.DataPropertyName = "lastName";
+            this.lastName.HeaderText = "Apellidos";
+            this.lastName.Name = "lastName";
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "Genero";
+            this.gender.Name = "gender";
+            // 
+            // birthDate
+            // 
+            this.birthDate.DataPropertyName = "birthDate";
+            this.birthDate.HeaderText = "Fecha de nacimiento";
+            this.birthDate.Name = "birthDate";
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "phone";
+            this.phone.HeaderText = "Teléfono";
+            this.phone.Name = "phone";
+            // 
+            // cellPhone
+            // 
+            this.cellPhone.DataPropertyName = "cellPhone";
+            this.cellPhone.HeaderText = "Celular";
+            this.cellPhone.Name = "cellPhone";
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Correo";
+            this.email.Name = "email";
+            // 
+            // update
+            // 
+            this.update.HeaderText = "Modificar";
+            this.update.Image = global::crudMvc.Properties.Resources.update3;
+            this.update.Name = "update";
+            // 
+            // deleteItem
+            // 
+            this.deleteItem.DataPropertyName = "delete";
+            this.deleteItem.HeaderText = "Eliminar";
+            this.deleteItem.Image = global::crudMvc.Properties.Resources.delete4;
+            this.deleteItem.Name = "deleteItem";
+            // 
             // PersonMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,6 +458,11 @@
         private System.Windows.Forms.DateTimePicker InputBirthDate;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.Label textPersonId;
+        private System.Windows.Forms.Label textSearch;
+        private System.Windows.Forms.TextBox InputSearch;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Button buttonPersonAll;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn cui;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
@@ -459,10 +473,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cellPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewImageColumn update;
-        private System.Windows.Forms.Label textPersonId;
-        private System.Windows.Forms.Label textSearch;
-        private System.Windows.Forms.TextBox InputSearch;
-        private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button buttonPersonAll;
+        private System.Windows.Forms.DataGridViewImageColumn deleteItem;
     }
 }
