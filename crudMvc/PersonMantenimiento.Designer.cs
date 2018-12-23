@@ -66,6 +66,7 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.update = new System.Windows.Forms.DataGridViewImageColumn();
             this.deleteItem = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pdf = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Datos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -239,7 +240,8 @@
             this.cellPhone,
             this.email,
             this.update,
-            this.deleteItem});
+            this.deleteItem,
+            this.pdf});
             this.Datos.Location = new System.Drawing.Point(304, 121);
             this.Datos.Name = "Datos";
             this.Datos.Size = new System.Drawing.Size(699, 258);
@@ -395,6 +397,12 @@
             this.deleteItem.Image = global::crudMvc.Properties.Resources.delete4;
             this.deleteItem.Name = "deleteItem";
             // 
+            // pdf
+            // 
+            this.pdf.HeaderText = "PDF";
+            this.pdf.Image = global::crudMvc.Properties.Resources.pdf;
+            this.pdf.Name = "pdf";
+            // 
             // PersonMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,5 +482,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewImageColumn update;
         private System.Windows.Forms.DataGridViewImageColumn deleteItem;
+        private System.Windows.Forms.DataGridViewImageColumn pdf;
     }
 }

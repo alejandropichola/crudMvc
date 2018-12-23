@@ -7,3 +7,4 @@ C:\code\visual\c#\crudMvc\Components\obj\Debug\Components.csproj.CoreCompileInpu
 C:\code\visual\c#\crudMvc\Components\obj\Debug\Components.csproj.CopyComplete
 C:\code\visual\c#\crudMvc\Components\obj\Debug\Components.dll
 C:\code\visual\c#\crudMvc\Components\obj\Debug\Components.pdb
+C:\code\visual\c#\crudMvc\Components\bin\Debug\itextsharp.dll

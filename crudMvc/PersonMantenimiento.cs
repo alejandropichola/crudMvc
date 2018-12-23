@@ -137,6 +137,26 @@ namespace crudMvc
                 InputEmail.Text = Datos.Rows[e.RowIndex].Cells["email"].Value.ToString();
                 ButtonInsert.Text = "Actualizar";
                 ButtonClear.Text = "Cancelar";
+            } else if (Datos.Rows[e.RowIndex].Cells["pdf"].Selected)
+            {
+                model.FirstName = Datos.Rows[e.RowIndex].Cells["firstName"].Value.ToString();
+                model.LastName = Datos.Rows[e.RowIndex].Cells["lastName"].Value.ToString();
+                model.Cui = Datos.Rows[e.RowIndex].Cells["cui"].Value.ToString();
+                string Gender = InputGender.Text.ToString();
+                if (String.Compare(Gender, "F") == 0)
+                {
+                    model.Gender = "Femenino";
+                }
+                else if (String.Compare(Gender, "M") == 0)
+                {
+                    model.Gender = "Masculino";
+                }
+                model.BirthDate = Datos.Rows[e.RowIndex].Cells["birthDate"].Value.ToString();
+                model.Phone = Datos.Rows[e.RowIndex].Cells["phone"].Value.ToString();
+                model.CellPhone = Datos.Rows[e.RowIndex].Cells["cellPhone"].Value.ToString();
+                model.Email = Datos.Rows[e.RowIndex].Cells["email"].Value.ToString();
+                service.GeneratePdf(model);
+                MessageBox.Show("Pdf creado correctamente");
             }
         }
 

@@ -19,6 +19,10 @@ namespace Services
             return data.PersonList();
         }
 
+        public void GeneratePdf (PersonModel person)
+        {
+            data.GeneratePdf(person);
+        }
         public void InsertPerson(PersonModel emp)
         {
             data.PersonInsert(emp);

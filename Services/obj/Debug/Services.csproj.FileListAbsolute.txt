@@ -9,3 +9,4 @@ C:\code\visual\c#\crudMvc\Services\obj\Debug\Services.csproj.CoreCompileInputs.c
 C:\code\visual\c#\crudMvc\Services\obj\Debug\Services.csproj.CopyComplete
 C:\code\visual\c#\crudMvc\Services\obj\Debug\Services.dll
 C:\code\visual\c#\crudMvc\Services\obj\Debug\Services.pdb
+C:\code\visual\c#\crudMvc\Services\bin\Debug\itextsharp.dll

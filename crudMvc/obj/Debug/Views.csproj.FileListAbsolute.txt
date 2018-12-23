@@ -16,3 +16,4 @@ C:\code\visual\c#\crudMvc\crudMvc\bin\Debug\Components.pdb
 C:\code\visual\c#\crudMvc\crudMvc\obj\Debug\Views.csproj.CopyComplete
 C:\code\visual\c#\crudMvc\crudMvc\obj\Debug\crudMvc.exe
 C:\code\visual\c#\crudMvc\crudMvc\obj\Debug\crudMvc.pdb
+C:\code\visual\c#\crudMvc\crudMvc\bin\Debug\itextsharp.dll

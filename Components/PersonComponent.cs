@@ -9,10 +9,62 @@ using System.Configuration;
 
 using System.Data.SqlClient;
 using System.Data;
+
+// import itextsharp
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+
 namespace Components
 {
     public class PersonComponent
     {
+        public void GeneratePdf (PersonModel person) {
+            try
+            {
+                string firstName = person.FirstName;
+                string lastName = person.LastName;
+                string cui = person.Cui;
+                string birthDate = person.BirthDate;
+                string phone = person.Phone;
+                string cellPhone = person.CellPhone;
+                string gender = "Masculino";
+                var timeStamp = DateTime.Now.ToFileTime();
+                if (String.Compare(person.Gender, "F") == 0) {
+                    gender = "Femenino";
+               }
+                string email = person.Email;
+                Document document = new Document();
+                PdfWriter.GetInstance(document, new FileStream("C:/code/" + timeStamp + ".pdf", FileMode.Create));
+                document.Open();
+                Paragraph t = new Paragraph("Datos de " + firstName);
+                t.Font.SetStyle(Font.BOLD);
+                t.Alignment = 1;
+                document.Add(t);
+
+                Paragraph n1 = new Paragraph("Nombres: " + firstName);
+                document.Add(n1);
+                Paragraph n2 = new Paragraph("Apellidos: " + lastName);
+                document.Add(n2);
+                Paragraph c = new Paragraph("Indentificación: " + cui);
+                document.Add(c);
+                Paragraph g = new Paragraph("Genero: " + gender);
+                document.Add(g);
+                Paragraph bD = new Paragraph("Fecha de nacimiento: " + birthDate);
+                document.Add(bD);
+                Paragraph e = new Paragraph("Correo: " + email);
+                document.Add(e);
+                Paragraph p = new Paragraph("Teléfono: " + phone);
+                document.Add(p);
+                Paragraph cP = new Paragraph("Celular: " + cellPhone);
+                document.Add(cP);
+
+                document.Close();
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+            }
+        }
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["sqlconex"].ConnectionString);
         public DataTable PersonList()
         {
